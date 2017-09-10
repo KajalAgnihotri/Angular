@@ -1,18 +1,24 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import {Http,Response} from '@angular/http'
 import 'rxjs/add/operator/map'
 
 @Component({
   selector: 'app-root',
-  template:`
-  <h1>{{title}}</h1>
-  <nav>
-    <a routerLink="/news" routerLinkActive="active"></a>
-</nav>
-<router-outlet></router-outlet>
-    `
+  templateUrl:'./app.component.html',
+  styleUrls:['./app.component.css']
 })
-export class AppComponent { }
+export class AppComponent {
+    
+newsJson:any;
+
+handleJson(json){
+  this.newsJson=json;
+  console.log("hellllll-----");
+    console.log("app json",this.newsJson);
+
+}
+
+ }
 
  
   

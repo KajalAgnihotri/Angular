@@ -3,18 +3,31 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http'
 import { AppComponent }  from './app.component';
-import { NewsComponent }  from './News.component';
 
-import {NewsService} from './news.service'
-import { AppRoutingModule} from './app-routing.module'
 
+
+import { AppRoutingModule} from './app-routing.module';
+import { SearchNewsComponent } from './search-news/search-news.component';
+import { NewsService } from './services/services.component'
+import { FavouriteService } from './services/favourite.service';
+import { FavouriteNewsComponent } from './favourite-news/favourite-news.component';
+import { SearchListComponent } from './search-list/search-list.component';
+import { MyFavouriteComponent } from './my-favourite/my-favourite.component';
+import { ViewFavouriteNewsComponent } from './view-favourite-news/view-favourite-news.component';
+import { NewsComponent } from './news/news.component'
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewsComponent,
+    SearchNewsComponent,
+  FavouriteNewsComponent,
+   SearchListComponent,
+   MyFavouriteComponent,
+   ViewFavouriteNewsComponent,
+   NewsComponent,
+    
    
   ],
   imports: [
@@ -24,7 +37,7 @@ import { AppRoutingModule} from './app-routing.module'
     AppRoutingModule
     
   ],
-  providers: [NewsService],
+  providers: [NewsService,FavouriteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

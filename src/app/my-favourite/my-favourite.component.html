@@ -1,0 +1,16 @@
+
+<div *ngIf="newsFav">
+<div class="container">
+  <div class="row">
+     <div class="col-xl-12 py-2">
+         <div class="row" >
+             <div class="col-xl-6 py-2" *ngFor="let d of newsFav">
+                              <view-favourite-news [viewFav]="d"></view-favourite-news>
+             
+                </div> 
+             </div>
+
+         </div>
+       </div>
+   </div>
+</div>
