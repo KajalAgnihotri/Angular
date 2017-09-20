@@ -27,11 +27,20 @@ import {FavNews } from '../FavNews'
             .subscribe(data=>{console.log("deleting the object",data)});
     
         }
-        update(id:number,news:FavNews){
-            console.log("update service");
-            return this.http.put(this.url+'/'+id,news)
-            .subscribe(data=>{console.log("updating the object",data)});
+        // update(news,comment){
+        //     news.comment=comment;
+        //     console.log("update service");
+        //     return this.http.put(this.url+'/'+news.id,news,{headers:new Headers({'Content-Type':'application/json'})})
+        //     .subscribe(data=>{console.log("updating the object",data)});
 
 
+        // }
+       
+        update(obj:any){
+            
+           return this.http.put(`http://localhost:63670/api/news/${obj.id}`,JSON.stringify(obj),
+           {headers:new Headers({'Content-Type':'application/json'})})
+           .subscribe();
+        
         }
     }

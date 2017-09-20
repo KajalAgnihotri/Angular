@@ -10,22 +10,29 @@ import { FavouriteService } from '../services/favourite.service';
 export class ViewFavouriteNewsComponent implements OnInit {
 
   constructor(private favNews:FavouriteService) { }
- @Input() viewFav:any;
+ @Input() viewFav:Array<any>;
+
   ngOnInit() {
-  }
+   }
+  
 
   
 
-  deleteFavourite(a:number){
-    console.log("delete view");
-      this.favNews.deleteObj(a);
-      console.log("call get");
-      this.favNews.getFavourite();
-     }
-     updateFavouriteNews(a:number,news:any){
-       console.log("update component");
-       this.favNews.update(a,news);
+  // deleteFavourite(a:number){
+  //   console.log("delete view");
+  //     this.favNews.deleteObj(a);
+  //     console.log("call get");
+    
+      
+  //     var ele = this.viewFav.find(f=>f.id==a);
+  //     const index= this.viewFav.indexOf(ele);
+  //     this.viewFav.splice(index,1);
+  //    }
+  //    updateFavouriteNews(news:any,values:string){
+  //      news.comment=values;
+  //      console.log("update component");
+  //      this.favNews.update(news);
 
 
      }
-}
+

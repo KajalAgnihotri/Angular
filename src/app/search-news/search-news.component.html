@@ -1,33 +1,3 @@
-
-<nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">News Corner</a>
+<app-news (termData)="handleJson($event)"></app-news>
+ <search-list  [newsJson]="newsJson"></search-list>
  
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/myFavourite">Favourite <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-              <input [(ngModel)]="temp" placeholder="Search" list="channel" name="Search..">
-               <button class="btn btn-outline-success my-2 my-sm-0" (click)="searchData(temp)">Search</button> 
-              <datalist id="channel" >
-              <option *ngFor="let h of data.sources" value="{{h.id}}">
-                
-              </option>
-                        
-              </datalist>  
-            </form>
-      </div>
- </nav>
-
- 
-
-  
-  

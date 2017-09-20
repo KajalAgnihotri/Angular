@@ -7,6 +7,7 @@ export class FavNews{
  publishedAt:string;
  url:string;
  urlToImage:string;
+ comment:string;
 
 
 }

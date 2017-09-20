@@ -11,18 +11,17 @@ import { SearchListComponent } from '../search-list/search-list.component';
 export class FavouriteNewsComponent implements OnInit {
 
   @Input()  details:any ;
-  newsFav:any={};
-  data2:any=[];
+  // newsFav:any={};
+  // data2:any=[];
   constructor(private favNews:FavouriteService) { }
 
   ngOnInit() {
     
   }
   
-  // deleteFavourite(a:string){
-  //   this.favNews.deleteObj(a);
-  // }
+  
   addFavourite(fav:FavNews){
+    
     console.log("hi");
     this.favNews.postFavourite(fav);
   }

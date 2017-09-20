@@ -1,6 +1,6 @@
 
 
-<div  class="card">
+<!-- <div  class="card">
   <img class="card-img-top" src="{{viewFav.urlToImage}}" alt="Card image cap" style="max-height: 300px" >
   <div class="card-block">
     <div>
@@ -10,10 +10,10 @@
     
 <a class="btn btn-primary" id="btn" >Comment</a>
 <div class="form-group">
-    <label for="comment">Comment:</label>
-    <input type="text" class="form-control" id="comment">
-  </div>
-  <button class="btn btn-success" id="btn" (click)=" updateFavouriteNews(viewFav.id,viewFav)">Add</button>
+    <label for="comment">Comment: {{viewFav.comment}}</label>
+    <input type="text" [(ngModel)]="temp" class="form-control" id="comment">
+  
+  <button class="btn btn-success" id="btn" (click)=" updateFavouriteNews(viewFav,temp)">Add</button></div>
       <!-- <a class="btn btn-primary" id="#comment" data-toggle="collapse" href="#commentData" aria-expanded="false" aria-controls="collapseExample">
       comment
       </a>
@@ -24,8 +24,8 @@
         
       </div>
     </div> -->
-  </div>
+  <!--</div>
 </div>
-</div>
+</div> -->
 
     

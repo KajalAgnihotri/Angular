@@ -1,5 +1,159 @@
 
-   <search-news (termData)="handleJson($event)"></search-news>
-   <search-list  [newsJson]="newsJson"></search-list>
+   
+<nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" id="toggle"></span>
+    </button>
+    <a class="navbar-brand" href="#" id="dna">DNA</a>
+   
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/app-my-favourite" id="Favourite"><i class="fa fa-heart fa-fw" aria-hidden="true"></i>Favourite <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" routerLink="/app-home" id="Favourite"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home <span class="sr-only">(current)</span></a>
+          </li>
+        <li class="nav-item">
+         
+        </li>
+        
+        </ul>
+              <!-- <a class="btn btn-outline-success my-2 my-sm-0"  routerLink="/app-login" >Login</a> -->
+              <a class="btn btn-warning my-2 my-sm-0" id="search" routerLink="/search-news" ><i class="fa fa-search fa-fw" aria-hidden="true"></i>Search</a> 
+              <button type="button" id="buttons" routerLink="/app-login" class=" btn btn-info  my-2 my-sm-0 ">Login </button>
+              <button type="button" id="buttons" routerLink="/app-register" class="btn btn-danger my-2 my-sm-0 ">Register</button>
+        </div>
+   </nav>
+   <div class="jumbotron">
+    <div class="container text">
+      
+    </div>
+  </div>
    <router-outlet></router-outlet>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <footer class="mt-5" >
+     <div class="container-fluid bg-faded mt-5">
+       <div class="container">
+         <div class="row py-3">
+           <!-- footer column 1 start -->
+           <div class="col-md-4">
+             <!-- row start -->
+             <div class="row py-2">
+               <div class="col-sm-3 hidden-md-down">
+                 <a class="bg-circle bg-info" href="https://twitter.com/ ">
+                   <i class="fa fa-2x fa-fw fa-twitter" aria-hidden="true "></i>
+                 </a>
+               </div>
+               <div class="col-sm-9">
+                 <h4>Tweets</h4>
+                 Embed here?
+               </div>
+             </div>
+             <!-- row end -->
+           </div>
+           <!-- footer column 1 end -->
+           <!-- footer column 2 start -->
+           <div class="col-md-4">
+             <!-- row start -->
+             <div class="row py-2">
+               <div class="col-sm-3 hidden-md-down">
+                 <a class="bg-circle bg-info" href="#">
+                   <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
+                 </a>
+               </div>
+               <div class="col-sm-9">
+                 <h4>Contact us</h4>
+                 <p>Why not?</p>
+               </div>
+             </div>
+             <!-- row end -->
+             <!-- row start -->
+             <div class="row py-2">
+               <div class="col-sm-3 hidden-md-down">
+                 <a class="bg-circle bg-info" href="#">
+                   <i class="fa fa-2x fa-fw fa-laptop" aria-hidden="true "></i>
+                 </a>
+               </div>
+               <div class="col-sm-9">
+                 <h4>Cookie policy</h4>
+                 <p class=" ">We use <a class=" " href="/# ">cookies </a></p>
+               </div>
+             </div>
+             <!-- row end -->
+           </div>
+           <!-- footer column 2 end -->
+           <!-- footer column 3 start -->
+           <div class="col-md-4">
+             <!-- row starting  -->
+             <div class="row py-2">
+               <div class="col-sm-3 hidden-md-down">
+                 <a class="bg-circle bg-danger" href="# ">
+                   <i class="fa fa-2x fa-fw fa-file-pdf-o" aria-hidden="true "></i>
+                 </a>
+               </div>
+               <div class="col-sm-9">
+                 <h4>Download pdf</h4>
+                 <a> You like print?</a>
+   
+               </div>
+             </div>
+             <!-- row ended -->
+             <!-- row starting  -->
+             <div class="row py-2">
+               <div class="col-sm-3 hidden-md-down">
+                 <a class="bg-circle bg-info" href="https://twitter.com/ ">
+                   <i class="fa fa-2x fa-fw fa-info" aria-hidden="true "></i>
+                 </a>
+               </div>
+               <div class="col-sm-9">
+                 <h4>Info</h4>
+                 About us.
+               </div>
+             </div>
+             <!-- row ended -->
+           </div>
+           <!-- footer column 3 end -->
+         </div>
+       </div>
+     </div>
+   
+     <div class="container-fluid bg-primary py-3">
+       <div class="container">
+         <div class="row py-3">
+           <div class="col-md-9" id="links">
+              <a class="text-white" href="#">About Us | </a>
+              <a class="text-white" href="#">Terms of Use | </a>
+              <a class="text-white" href="#">Privacy Policy | </a>
+              <a class="text-white" href="#">Subscribe | </a>
+              <a class="text-white" href="#">Archieve  </a>
+             
+           </div>
+           
+            
+           
+           <div class="col-md-3" id="social">
+             <div class="d-inline-block">
+               <div class="bg-circle-outline d-inline-block">
+                 <a href="https://www.facebook.com/" class="text-white"><i class="fa fa-2x fa-fw fa-facebook"></i>
+       </a>
+               </div>
+   
+               <div class="bg-circle-outline d-inline-block">
+                 <a href="https://twitter.com/" class="text-white">
+                   <i class="fa fa-2x fa-fw fa-twitter"></i></a>
+               </div>
+   
+               <div class="bg-circle-outline d-inline-block">
+                 <a href="https://www.linkedin.com/company/" class="text-white">
+                   <i class="fa fa-2x fa-fw fa-linkedin"></i></a>
+               </div>
+             </div>
+           </div>
+           <p class="text-white" id="copy">&copy; DailyNewsandAnalysis</p>
+         </div>
+       </div>
+     </div>
+   </footer>
+  
  

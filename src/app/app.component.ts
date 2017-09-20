@@ -9,14 +9,7 @@ import 'rxjs/add/operator/map'
 })
 export class AppComponent {
     
-newsJson:any;
 
-handleJson(json){
-  this.newsJson=json;
-  console.log("hellllll-----");
-    console.log("app json",this.newsJson);
-
-}
 
  }
 

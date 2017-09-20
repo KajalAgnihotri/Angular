@@ -1,4 +1,4 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
 import {NewsService } from '../services/services.component'
 
 @Component({
@@ -7,37 +7,15 @@ import {NewsService } from '../services/services.component'
   styleUrls: ['./search-news.component.css']
 })
 
-export class SearchNewsComponent implements OnInit {
-
- 
-  data:any={};
-  data2:any=[];
-
-  stat=false;
-  @Output() termData :EventEmitter<any> = new EventEmitter();
+export class SearchNewsComponent  {
+  newsJson:any;
   
-  constructor(private n:NewsService) { }
-
-  ngOnInit():void {
-    this.displayData();
+  handleJson(json){
+    this.newsJson=json;
+    console.log("hellllll-----");
+      console.log("app json",this.newsJson);
+  
   }
-  displayData(){
-    this.n.getChannel().subscribe(data=>{
-        console.log(data);
-        this.data=data;
-    })
-
-}
-searchData(temp: string){
-    this.n.getNews(temp).subscribe(data2=>{
-        this.data2=JSON.parse(data2["_body"]);
-        console.log(this.data2);
-        this.termData.emit(this.data2);});
-        
-        this.stat=true;
-    
-}
-
 }
 
 

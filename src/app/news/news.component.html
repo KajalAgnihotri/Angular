@@ -1,3 +1,11 @@
-<p>
-  news works!
-</p>
+
+<form class="form-inline my-2 my-lg-0" id="textBox">
+  <input [(ngModel)]="temp" placeholder="Search" list="channel" name="Search..">
+   <button class="btn btn-success my-2 my-sm-0" (click)="searchData(temp)" id="go">Go !</button>  
+  <datalist id="channel" >
+  <option *ngFor="let h of data.sources" value="{{h.id}}">
+    
+  </option>
+            
+  </datalist>  
+</form>

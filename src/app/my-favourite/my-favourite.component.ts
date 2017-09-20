@@ -8,7 +8,7 @@ import { FavouriteService } from '../services/favourite.service';
   styleUrls: ['./my-favourite.component.css']
 })
 export class MyFavouriteComponent implements OnInit {
-  newsFav:any;
+  newsFav:Array<any>;
 
   constructor(private favNews:FavouriteService) { }
 
@@ -18,5 +18,21 @@ export class MyFavouriteComponent implements OnInit {
   getFavouriteNews(){
       this.favNews.getFavourite().subscribe(newsFav=>this.newsFav=newsFav);
      }
+     deleteFavourite(a:number){
+      console.log("delete view");
+        this.favNews.deleteObj(a);
+        console.log("call get");
+      
+        
+        var ele = this.newsFav.find(f=>f.id==a);
+        const index= this.newsFav.indexOf(ele);
+        this.newsFav.splice(index,1);
+       }
+       updateFavouriteNews(news:any,values:string){
+         news.comment=values;
+         console.log("update component");
+         this.favNews.update(news);
+     
 
+}
 }

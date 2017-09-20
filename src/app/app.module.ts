@@ -14,7 +14,11 @@ import { FavouriteNewsComponent } from './favourite-news/favourite-news.componen
 import { SearchListComponent } from './search-list/search-list.component';
 import { MyFavouriteComponent } from './my-favourite/my-favourite.component';
 import { ViewFavouriteNewsComponent } from './view-favourite-news/view-favourite-news.component';
-import { NewsComponent } from './news/news.component'
+import { NewsComponent } from './news/news.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
 
 
 
@@ -27,6 +31,10 @@ import { NewsComponent } from './news/news.component'
    MyFavouriteComponent,
    ViewFavouriteNewsComponent,
    NewsComponent,
+   HomeComponent,
+   LoginComponent,
+   RegisterComponent,
+  
     
    
   ],
